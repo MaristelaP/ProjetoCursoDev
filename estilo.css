@@ -1,0 +1,14 @@
+p{
+    text-align: justify;
+}
+
+table{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.brand-logo {
+    font-size: medium;
+    font-style: italic; 
+    margin: 10px;
+}
