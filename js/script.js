@@ -58,19 +58,19 @@ var oe = [
 
 
 $(document).ready(function() {
-  console.log(oe)
+ // console.log(oe)
   
   
-  $("#container_oe").append("Utilize o formulário ao lado para fazer sua pesquisa.");
+  $("#container_oe").append("Utilize este formulário para fazer sua pesquisa.");
   
   $("#pesq").on("click",function(){
-    console.log("clicado")
+  //  console.log("clicado")
     var oleo = $("#oleo").val();
     var emocional = $("#emocional").val();
     var vibracional = $("#vibracional").val();
     var fisica = $("#fisica").val();
-    console.log(oleo);
-    console.log(emocional);
+   // console.log(oleo);
+   // console.log(emocional);
     $("#container_oe").html("");
     var oe_filtrado = oe.filter(function(objeto){
       return objeto.nome.toLowerCase().includes(oleo.toLowerCase()) && objeto.propriedades_emocionais.includes(emocional) 
@@ -80,7 +80,7 @@ $(document).ready(function() {
     if (oe_filtrado.length == 0 ){
       $("#container_oe").append("Nenhum resultado encontrado");
     }
-    console.log(oe_filtrado)
+   // console.log(oe_filtrado)
     $.each(oe_filtrado,function(i,item){
       $("#container_oe").append("<div><h5>"+item.nome+"</h5><br>"+"<h6>Propriedades Emocionais:</h6>"+item.propriedades_emocionais+"<br>"+"<h6>Propriedades Vibracionais:</h6>"+
       item.propriedades_vibracionais+"<br>"+"<h6>Propriedades Físicas:</h6>"+item.propriedades_fisicas+"<br>"+"<h6>Precauções:</h6>"+item.precaucoes+"</div>");

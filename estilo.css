@@ -12,3 +12,7 @@ table{
     font-style: italic; 
     margin: 10px;
 }
+
+.row form a {
+    margin: 10px;
+}
